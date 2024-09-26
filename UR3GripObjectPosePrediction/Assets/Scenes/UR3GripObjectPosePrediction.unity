@@ -6365,7 +6365,7 @@ MonoBehaviour:
   simulationDeltaTime: 0.0166
   framesBetweenCaptures: 0
   showVisualizations: 1
-  alphaThreshold: 0.1
+  alphaThreshold: 0.398
   overrideLayerMask: 0
   useAccumulation: 0
   references:
