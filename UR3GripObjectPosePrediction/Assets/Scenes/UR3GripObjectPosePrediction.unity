@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 35549035}
   - component: {fileID: 35549034}
   - component: {fileID: 35549036}
+  - component: {fileID: 35549037}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -347,8 +348,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 100000
+  m_Color: {r: 0.56804025, g: 0.6509434, b: 0.6509434, a: 1}
+  m_Intensity: 79996.36
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -392,7 +393,7 @@ Light:
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 1
+  m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -6.123829e+29}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -433,7 +434,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 100000
+  m_Intensity: 79996.36
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -535,6 +536,18 @@ MonoBehaviour:
   m_AreaLightEmissiveMeshShadowCastingMode: 0
   m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
   m_AreaLightEmissiveMeshLayer: -1
+--- !u!114 &35549037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35549033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64af179f0e512471fbf1410d6a6fb13e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &38084323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1278,6 +1291,189 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &99142268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 99142270}
+  - component: {fileID: 99142269}
+  m_Layer: 0
+  m_Name: SimulationScenario
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &99142269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99142268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03dfc4690482efe43ac40997f4dc351f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Randomizers:
+  - rid: 5814888771116072964
+  - rid: 5814888771116072966
+  - rid: 509604125935140887
+  configuration: {fileID: 0}
+  constants:
+    randomSeed: 539662031
+    totalFrames: 1000
+  automaticIteration: 1
+  references:
+    version: 2
+    RefIds:
+    - rid: 509604125935140887
+      type: {class: LightRandomizer, ns: , asm: Assembly-CSharp}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+        lightIntensityParameter:
+          collapsed: 0
+          value:
+            rid: 509604125935140888
+        rotationX:
+          collapsed: 0
+          value:
+            rid: 509604125935140889
+        rotationY:
+          collapsed: 0
+          value:
+            rid: 509604125935140890
+        lightColorParameter:
+          collapsed: 0
+          red:
+            rid: 509604125935140891
+          green:
+            rid: 509604125935140892
+          blue:
+            rid: 509604125935140893
+          alpha:
+            rid: 509604125935140894
+    - rid: 509604125935140888
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 1000
+          maximum: 80000
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140889
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 40
+          maximum: 80
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140890
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: -180
+          maximum: 180
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140891
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0.5
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140892
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0.5
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140893
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0.5
+          maximum: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 509604125935140894
+      type: {class: ConstantSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        value: 1
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5814888771116072964
+      type: {class: YRotationRandomizer, ns: , asm: Assembly-CSharp}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+        rotationRange:
+          collapsed: 0
+          value:
+            rid: 5814888771116072965
+    - rid: 5814888771116072965
+      type: {class: UniformSampler, ns: UnityEngine.Perception.Randomization.Samplers,
+        asm: Unity.Perception.Runtime}
+      data:
+        range:
+          minimum: 0
+          maximum: 360
+        <minAllowed>k__BackingField: 0
+        <maxAllowed>k__BackingField: 0
+        <shouldCheckValidRange>k__BackingField: 0
+    - rid: 5814888771116072966
+      type: {class: RobotArmObjectPositionRandomizer, ns: , asm: Assembly-CSharp}
+      data:
+        m_Enabled: 1
+        collapsed: 0
+        <enabledStateCanBeSwitchedByUser>k__BackingField: 1
+        plane: {fileID: 1584800528}
+        maxPlacementTries: 100
+        robotBase: {fileID: 1617415356}
+        minRobotReachability: 0.2
+        maxRobotReachability: 0.4
+--- !u!4 &99142270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 99142268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.06492406, y: 1.3458524, z: -1.311188}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123193933
 GameObject:
   m_ObjectHideFlags: 0
@@ -6352,7 +6548,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraSensor:
     rid: 5814888771116072960
-  m_Labelers: []
+  m_Labelers:
+  - rid: 5814888771116072963
   m_LayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -6376,6 +6573,15 @@ MonoBehaviour:
         asm: Unity.Perception.Runtime}
       data:
         superSamplingFactor: 1
+    - rid: 5814888771116072963
+      type: {class: BoundingBox3DLabeler, ns: UnityEngine.Perception.GroundTruth.Labelers,
+        asm: Unity.Perception.Runtime}
+      data:
+        enabled: 1
+        annotationId: bounding box 3D
+        idLabelConfig: {fileID: 11400000, guid: 317093b27ae9abe62ab6a49a9c5f157d,
+          type: 2}
+        visualizationColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &769048249
 GameObject:
   m_ObjectHideFlags: 0
@@ -9395,6 +9601,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   geometryType: 3
+--- !u!1 &1218465961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1060206337461994501, guid: 000ea530b614d4a25b15d64ebe0b6ad2,
+    type: 3}
+  m_PrefabInstance: {fileID: 1386877750}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1218465967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218465961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 417413544452d4d3b9d7955bb12c9077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1218465968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218465961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b33f0bc2b78db642a758f07826d0dd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  labels:
+  - cube_position
+  useAutoLabeling: 0
+  autoLabelingSchemeType: 
+--- !u!114 &1218465969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218465961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daba81ca1c4ca4f98b498d2ac664220e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mustBeReachable: 1
 --- !u!1 &1238337114
 GameObject:
   m_ObjectHideFlags: 8
@@ -10857,7 +11110,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1060206337461994501, guid: 000ea530b614d4a25b15d64ebe0b6ad2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218465968}
+    - targetCorrespondingSourceObject: {fileID: 1060206337461994501, guid: 000ea530b614d4a25b15d64ebe0b6ad2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218465967}
+    - targetCorrespondingSourceObject: {fileID: 1060206337461994501, guid: 000ea530b614d4a25b15d64ebe0b6ad2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1218465969}
   m_SourcePrefab: {fileID: 100100000, guid: 000ea530b614d4a25b15d64ebe0b6ad2, type: 3}
 --- !u!43 &1387172327
 Mesh:
@@ -12459,6 +12724,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46398bc5d6905ad429a6d2d973afe002, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1584800528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5666230720265026300, guid: 91cd5f2dc7b2d4994b76c66c837127eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1738620382}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1599647800
 GameObject:
   m_ObjectHideFlags: 0
@@ -17735,3 +18006,4 @@ SceneRoots:
   - {fileID: 586667618}
   - {fileID: 1324518346}
   - {fileID: 1565218652}
+  - {fileID: 99142270}
