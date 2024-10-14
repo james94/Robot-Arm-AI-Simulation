@@ -64,6 +64,53 @@ The following two URDF and ROS TCP latest Unity3D packages resulted in error aft
 
 ## How to Run the Demo
 
+### Build ROS Docker Image & Launch Docker Container
+
+Download the assets from the "Robotics Development: ROS, Unity3D, DL & DevOps Tools (Tutorial Series)" resource.
+
+Then run these commands to build the ROS docker image:
+
+~~~bash
+cd ~/src/Robot-Arm-AI-Simulation/
+
+# Assuming you downloaded the tutorial assets into our project's folder, navigate to this folder
+cd Robotics-Object-Pose-Estimation-main/Robotics-Object-Pose-Estimation
+
+docker build -t unity-robotics:pose-estimation -f docker/Dockerfile .
+~~~
+
+Lauch ROS docker container:
+
+~~~bash
+docker run -it --rm -p 10000:10000 -p 5005:5005 unity-robotics:pose-estimation /bin/bash
+~~~
+
+Source ROS workspace:
+
+~~~bash
+# After launching docker container, you start in this folder
+# root@59f88a544b40:/catkin_ws#
+source devel/setup.bash
+~~~
+
+- NOTE: For the "Build ROS Docker Image", I referenced the video tutorial's markdown "Robotics-Object-Pose-Estimation/Documentation/quick_demo_full.md" and their "Set Up the ROS Side"
+
+### Launch ROS MoveIt in Docker Container
+
+We will run `roslaunch` to start ROS core, set ROS parameters, start server endpoint, start Mover service, start Pose Estimation nodes and launch Moveit:
+
+~~~bash
+roslaunch ur3_moveit pose_est.launch
+~~~
+
+### Play Unity UR Robot Arm Grip Object Prediction
+
+1\. In Unity, press **play** button.
+
+2\. Click on **Pose Estimation**, so the UR robot arm performs **Grip Object Prediction**,
+which results in the UR robot arm grabbing the **cube** and moving it to the desired **goal**
+location.
+
 ## Resources
 
 - Robotics Development: ROS, Unity3D, DL & DevOps Tools (Tutorial Series): https://youtube.com/playlist?list=PLB8VXMjsTRoue4aodor1lDyZhFTKEP58i&si=e_JukXpAezD40sQt
