@@ -60,15 +60,17 @@ The following two URDF and ROS TCP latest Unity3D packages resulted in error aft
 - ROS TCP Connector package (v0.7.0)
     - Git URL Import Package: https://github.com/Unity-Technologies/ROS-TCP-Connector.git?path=/com.unity.robotics.ros-tcp-connector#v0.7.0
 
-
-
 ## How to Run the Demo
 
-### Build ROS Docker Image & Launch Docker Container
+### Setup ROS Unity Docker Dev Environment
 
-Download the assets from the "Robotics Development: ROS, Unity3D, DL & DevOps Tools (Tutorial Series)" resource.
+For more steps on setting up the ROS Unity Docker development enviornment, refer to our guide: [0_setup_ros_docker.md](../Robot-Arm-AI-Simulation/docs/0_setup_ros_docker.md)
 
-Then run these commands to build the ROS docker image:
+<!-- ### Build ROS Docker Image & Launch Docker Container  -->
+
+<!-- Download the assets from the "Robotics Development: ROS, Unity3D, DL & DevOps Tools (Tutorial Series)" resource. -->
+
+<!-- Then run these commands to build the ROS docker image:
 
 ~~~bash
 cd ~/src/Robot-Arm-AI-Simulation/
@@ -76,32 +78,33 @@ cd ~/src/Robot-Arm-AI-Simulation/
 # Assuming you downloaded the tutorial assets into our project's folder, navigate to this folder
 cd Robotics-Object-Pose-Estimation-main/Robotics-Object-Pose-Estimation
 
-docker build -t unity-robotics:pose-estimation -f docker/Dockerfile .
-~~~
+# docker build -t unity-robotics:pose-estimation -f docker/Dockerfile .
+docker build -t unity-robotics:pose-estimation -f docker/unity-robotics/Dockerfile .
+~~~ -->
 
-Lauch ROS docker container:
+<!-- Lauch ROS docker container:
 
 ~~~bash
 docker run -it --rm -p 10000:10000 -p 5005:5005 unity-robotics:pose-estimation /bin/bash
-~~~
+~~~ -->
 
-Source ROS workspace:
+<!-- Source ROS workspace:
 
 ~~~bash
 # After launching docker container, you start in this folder
 # root@59f88a544b40:/catkin_ws#
 source devel/setup.bash
-~~~
+~~~ -->
 
-- NOTE: For the "Build ROS Docker Image", I referenced the video tutorial's markdown "Robotics-Object-Pose-Estimation/Documentation/quick_demo_full.md" and their "Set Up the ROS Side"
+<!-- - NOTE: For the "Build ROS Docker Image", I referenced the video tutorial's markdown "Robotics-Object-Pose-Estimation/Documentation/quick_demo_full.md" and their "Set Up the ROS Side" -->
 
-### Launch ROS MoveIt in Docker Container
+<!-- ### Launch ROS MoveIt in Docker Container
 
 We will run `roslaunch` to start ROS core, set ROS parameters, start server endpoint, start Mover service, start Pose Estimation nodes and launch Moveit:
 
 ~~~bash
 roslaunch ur3_moveit pose_est.launch
-~~~
+~~~ -->
 
 ### Play Unity UR Robot Arm Grip Object Prediction
 
@@ -114,3 +117,5 @@ location.
 ## Resources
 
 - Robotics Development: ROS, Unity3D, DL & DevOps Tools (Tutorial Series): https://youtube.com/playlist?list=PLB8VXMjsTRoue4aodor1lDyZhFTKEP58i&si=e_JukXpAezD40sQt
+
+- For more information on original project, refer to Unity-Technologies - Robotics-Object-Pose-Estimation: https://github.com/Unity-Technologies/Robotics-Object-Pose-Estimation/tree/main

@@ -10,15 +10,29 @@ ENV ROS_WORKSPACE=/catkin_ws
 
 WORKDIR $ROS_WORKSPACE
 
-# Copy each directory explicitly to avoid workspace cruft
-COPY ./ROS/src/moveit_msgs $ROS_WORKSPACE/src/moveit_msgs
-COPY ./ROS/src/robotiq $ROS_WORKSPACE/src/robotiq
-COPY ./ROS/src/ros_tcp_endpoint $ROS_WORKSPACE/src/ros_tcp_endpoint
-COPY ./ROS/src/universal_robot $ROS_WORKSPACE/src/universal_robot
+RUN mkdir -p /opt/guz/ext-ros/comp
+RUN chmod -R 777 /opt/guz/ext-ros
+
+COPY ./scripts/comp/10-clone-moveit_msgs.sh /opt/guz/ext-ros/comp
+RUN chmod +x /opt/guz/ext-ros/comp/10-clone-moveit_msgs.sh
+RUN bash /opt/guz/ext-ros/comp/10-clone-moveit_msgs.sh
+
+COPY ./scripts/comp/20-clone-robotiq.sh /opt/guz/ext-ros/comp
+RUN chmod +x /opt/guz/ext-ros/comp/20-clone-robotiq.sh
+RUN bash /opt/guz/ext-ros/comp/20-clone-robotiq.sh
+
+COPY ./scripts/comp/30-clone-ros-tcp-endpoint.sh /opt/guz/ext-ros/comp
+RUN chmod +x /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
+RUN bash /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
+
+COPY ./scripts/comp/40-clone-universal_robot.sh /opt/guz/ext-ros/comp
+RUN chmod +x /opt/guz/ext-ros/comp/40-clone-universal_robot.sh
+RUN bash /opt/guz/ext-ros/comp/40-clone-universal_robot.sh
+
 COPY ./ROS/src/ur3_moveit $ROS_WORKSPACE/src/ur3_moveit
 
-COPY ./docker/set-up-workspace /setup.sh
-COPY docker/tutorial /tutorial
+COPY set-up-workspace /setup.sh
+COPY tutorial /tutorial
 
 RUN /bin/bash -c "find $ROS_WORKSPACE -type f -print0 | xargs -0 dos2unix"
 
