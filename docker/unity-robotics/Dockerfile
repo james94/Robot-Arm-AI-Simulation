@@ -21,9 +21,10 @@ COPY ./scripts/comp/20-clone-robotiq.sh /opt/guz/ext-ros/comp
 RUN chmod +x /opt/guz/ext-ros/comp/20-clone-robotiq.sh
 RUN bash /opt/guz/ext-ros/comp/20-clone-robotiq.sh
 
-COPY ./scripts/comp/30-clone-ros-tcp-endpoint.sh /opt/guz/ext-ros/comp
-RUN chmod +x /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
-RUN bash /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
+# For now need to use the particular ROS TCP Endpoint from Unity's Robotics-Object-Pose-Estimation
+# COPY ./scripts/comp/30-clone-ros-tcp-endpoint.sh /opt/guz/ext-ros/comp
+# RUN chmod +x /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
+# RUN bash /opt/guz/ext-ros/comp/30-clone-ros-tcp-endpoint.sh
 
 COPY ./scripts/comp/40-clone-universal_robot.sh /opt/guz/ext-ros/comp
 RUN chmod +x /opt/guz/ext-ros/comp/40-clone-universal_robot.sh
