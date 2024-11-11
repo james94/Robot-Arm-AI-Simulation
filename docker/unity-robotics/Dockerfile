@@ -29,16 +29,23 @@ COPY ./scripts/comp/40-clone-universal_robot.sh /opt/guz/ext-ros/comp
 RUN chmod +x /opt/guz/ext-ros/comp/40-clone-universal_robot.sh
 RUN bash /opt/guz/ext-ros/comp/40-clone-universal_robot.sh
 
-COPY ./ROS/src/ur3_moveit $ROS_WORKSPACE/src/ur3_moveit
+COPY ./scripts/comp/50-clone-unity_ur3_moveit.sh /opt/guz/ext-ros/comp
+RUN chmod +x /opt/guz/ext-ros/comp/50-clone-unity_ur3_moveit.sh
+RUN bash /opt/guz/ext-ros/comp/50-clone-unity_ur3_moveit.sh
+
+COPY ./ROS/src/ur3_moveit/models $ROS_WORKSPACE/src/ur3_moveit/models
 
 COPY set-up-workspace /setup.sh
 COPY tutorial /tutorial
 
 RUN /bin/bash -c "find $ROS_WORKSPACE -type f -print0 | xargs -0 dos2unix"
 
-RUN dos2unix /tutorial && dos2unix /setup.sh && chmod +x /setup.sh && /setup.sh && rm /setup.sh
+RUN dos2unix /tutorial
+RUN dos2unix /setup.sh
+RUN chmod +x /setup.sh
+RUN /setup.sh
 
-# pre-load model
+# # # pre-load model
 RUN python3 -c 'import src.ur3_moveit.src.ur3_moveit.setup_and_run_model as model; model.preload()'
 
 ENTRYPOINT ["bash", "/tutorial"]
