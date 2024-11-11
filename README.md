@@ -64,7 +64,7 @@ The following two URDF and ROS TCP latest Unity3D packages resulted in error aft
 
 ### Setup ROS Unity Docker Dev Environment
 
-For more steps on setting up the ROS Unity Docker development enviornment, refer to our guide: [0_setup_ros_docker.md](../Robot-Arm-AI-Simulation/docs/0_setup_ros_docker.md)
+For more steps on setting up the ROS Unity Docker development enviornment, refer to our guide: [0_setup_ros_docker.md](./docs/0_setup_ros_docker.md)
 
 <!-- ### Build ROS Docker Image & Launch Docker Container  -->
 
