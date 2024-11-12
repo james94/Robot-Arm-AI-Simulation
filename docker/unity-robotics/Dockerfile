@@ -34,7 +34,10 @@ COPY ./scripts/comp/50-clone-unity_ur3_moveit.sh /opt/guz/ext-ros/comp
 RUN chmod +x /opt/guz/ext-ros/comp/50-clone-unity_ur3_moveit.sh
 RUN bash /opt/guz/ext-ros/comp/50-clone-unity_ur3_moveit.sh
 
+# TODO (JG): Refactor with volume mount for UR3_MoveIt DL Model & mover.py increase planning time update
 COPY ./ROS/src/ur3_moveit/models $ROS_WORKSPACE/src/ur3_moveit/models
+COPY ./ROS/src/ur3_moveit/scripts/mover.py $ROS_WORKSPACE/src/ur3_moveit/scripts/mover.py
+RUN chmod +x $ROS_WORKSPACE/src/ur3_moveit/scripts/mover.py
 
 COPY set-up-workspace /setup.sh
 COPY tutorial /tutorial
