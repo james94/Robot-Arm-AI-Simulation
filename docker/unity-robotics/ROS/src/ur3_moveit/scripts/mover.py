@@ -43,7 +43,7 @@ def plan_trajectory(move_group, destination_pose, start_joint_angles):
 
     move_group.set_pose_target(destination_pose)
 
-    move_group.set_planning_time(10) # 10 seconds for planning
+    move_group.set_planning_time(20) # 20 seconds for planning
 
     return planCompat(move_group.plan())
 
