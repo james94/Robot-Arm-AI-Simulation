@@ -1,7 +1,3 @@
-[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl"]
-	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl
-	url = git@github.com:james94/UROSWorldControl.git
-	branch = UE_550
 [submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboVision"]
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboVision
 	url = git@github.com:james94/URoboVision.git
@@ -25,3 +21,7 @@
 	path = ros2_ws/src/urobosim_msgs
 	url = git@github.com:james94/urobosim_msgs.git
 	branch = ROS2_Jazzy
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl
+	url = git@github.com:james94/UROSWorldControl.git
+	branch = UE_550
