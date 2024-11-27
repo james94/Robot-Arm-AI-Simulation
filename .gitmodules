@@ -1,7 +1,3 @@
-[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils"]
-    path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils
-    url = git@github.com:james94/UUtils.git
-	branch = UE_550
 [submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSBridge"]
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSBridge
 	url = git@github.com:james94/UROSBridge.git
@@ -22,10 +18,10 @@
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UTFPublisher
 	url = git@github.com:james94/UTFPublisher.git
 	branch = UE_550
-; [submodule "ros2_ws/src/urobosim_msgs"]
-; 	path = ros2_ws/src/urobosim_msgs
-; 	url = git@github.com:james94/urobosim_msgs.git
-; 	branch = ROS2_Jazzy
 [submodule "ros2_ws/src/urobosim_msgs"]
 	path = ros2_ws/src/urobosim_msgs
 	url = git@github.com:james94/urobosim_msgs.git
+	branch = ROS2_Jazzy
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils
+	url = git@github.com:james94/UUtils.git
