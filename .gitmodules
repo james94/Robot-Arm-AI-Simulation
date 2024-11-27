@@ -1,0 +1,31 @@
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils"]
+    path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils
+    url = git@github.com:james94/UUtils.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSBridge"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSBridge
+	url = git@github.com:james94/UROSBridge.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UROSWorldControl
+	url = git@github.com:james94/UROSWorldControl.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboVision"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboVision
+	url = git@github.com:james94/URoboVision.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim
+	url = git@github.com:james94/URoboSim.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UTFPublisher"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UTFPublisher
+	url = git@github.com:james94/UTFPublisher.git
+	branch = UE_550
+; [submodule "ros2_ws/src/urobosim_msgs"]
+; 	path = ros2_ws/src/urobosim_msgs
+; 	url = git@github.com:james94/urobosim_msgs.git
+; 	branch = ROS2_Jazzy
+[submodule "ros2_ws/src/urobosim_msgs"]
+	path = ros2_ws/src/urobosim_msgs
+	url = git@github.com:james94/urobosim_msgs.git

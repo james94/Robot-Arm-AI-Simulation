@@ -140,7 +140,7 @@ cd $HOME/Robot-Arm-AI-Simulation/ros2_ws/src
 4\. Add urobosim_msgs repository as submodule:
 
 ~~~bash
-git submodule add https://github.com/james94/urobosim_msgs.git
+git submodule add git@github.com:james94/urobosim_msgs.git
 ~~~
 
 ### 3. Resolve Dependencies
@@ -179,6 +179,9 @@ including `urobosim_msgs`:
 ~~~bash
 colcon build
 ~~~
+
+- NOTE: if you run into a build issue with **CMAKE_PREFIX_PATH**, try: `unset CMAKE_PREFIX_PATH` to remove the non-existent path
+- Then retry sourcing the ROS2 Jazzy setup and then rerun colcon build
 
 For more info on migrating from ROS kinetic to ROS2 jazzy, refer to perplexity AI: https://www.perplexity.ai/search/you-are-a-software-engineer-wi-GsVq_LksTjejC2PcsyuO3g
 
