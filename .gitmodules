@@ -1,7 +1,3 @@
-[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim"]
-	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim
-	url = git@github.com:james94/URoboSim.git
-	branch = UE_550
 [submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils"]
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UUtils
 	url = git@github.com:james94/UUtils.git
@@ -24,4 +20,8 @@
 [submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UTFPublisher"]
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/UTFPublisher
 	url = git@github.com:james94/UTFPublisher.git
+	branch = UE_550
+[submodule "unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim"]
+	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim
+	url = git@github.com:james94/URoboSim.git
 	branch = UE_550
