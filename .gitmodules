@@ -25,3 +25,7 @@
 	path = unreal/ue_5_5_0/UR3GripObjPosePred/Plugins/URoboSim
 	url = git@github.com:james94/URoboSim.git
 	branch = UE_550
+[submodule "ros2_ws/src/moveit_msgs"]
+	path = ros2_ws/src/moveit_msgs
+	url = git@github.com:james94/moveit_msgs.git
+	branch = ROS2_Jazzy
